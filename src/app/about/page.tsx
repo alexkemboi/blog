@@ -29,7 +29,9 @@ const page = () => {
 
     return (
         <div className="bg-[#F5F5F5] h-full">
-            <Layout children={<About aboutContent={aboutContent} />} />
+            <Layout>
+                <About aboutContent={aboutContent} />
+            </Layout>
         </div>
     );
 };

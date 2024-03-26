@@ -7,7 +7,9 @@ import React from "react";
 const page = () => {
   return (
     <div className="bg-[#F5F5F5] h-full">
-      <Layout children={<Home />} />
+      <Layout >
+        <Home />
+      </Layout>
     </div>
   );
 };

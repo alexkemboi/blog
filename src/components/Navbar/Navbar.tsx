@@ -64,7 +64,7 @@ const Navbar = () => {
                     {/* Navbar Brand */}
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex-shrink-0 flex items-center">
-                            <h4 className='text-2xl font-bold'>Kemboi's Blog'</h4>
+                            <h4 className='text-2xl font-bold'>Kembois Blog</h4>
                         </div>
                         {/* Navbar links */}
                         <div className="hidden sm:block sm:ml-6">
