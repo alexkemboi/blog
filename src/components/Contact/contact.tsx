@@ -37,9 +37,15 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 w-4/5 bg-gray-300">
             <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Contact Us</h2>
-            <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+            <form onSubmit={handleSubmit} className="max-w-lg mx-auto border border-solid rounded-sm p-4">
+                {isSuccess && (
+                    <p className="text-green-500 mt-4">Form submitted successfully!</p>
+                )}
+                {error && (
+                    <p className="text-red-500 mt-4">{error}</p>
+                )}
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name</label>
                     <input
@@ -84,12 +90,6 @@ const Contact: React.FC = () => {
                         {isLoading ? 'Submitting...' : 'Submit'}
                     </button>
                 </div>
-                {isSuccess && (
-                    <p className="text-green-500 mt-4">Form submitted successfully!</p>
-                )}
-                {error && (
-                    <p className="text-red-500 mt-4">{error}</p>
-                )}
             </form>
         </div>
     );

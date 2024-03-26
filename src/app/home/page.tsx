@@ -1,13 +1,15 @@
 "use client"
+import Home from "@/components/Home/home";
 import Layout from "@/components/Layout/layout";
-import Login from "@/components/Login/login";
 import React from "react";
-const Home = () => {
+
+
+const page = () => {
   return (
     <div className="bg-[#F5F5F5] h-full">
-      <Login />
+      <Layout children={<Home />} />
     </div>
   );
 };
 
-export default Home;
+export default page;

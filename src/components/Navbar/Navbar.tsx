@@ -5,10 +5,12 @@ const Navbar = () => {
 
     // Dummy array data for dynamic menus
     const menus = [
-        { id: 1, title: 'Home', link: '/' },
+        { id: 1, title: 'Home', link: '/home' },
         { id: 2, title: 'About', link: '/about' },
-        { id: 3, title: 'Services', link: '/services' },
-        { id: 4, title: 'Contact', link: '/contact' },
+        { id: 3, title: 'Contact', link: '/contact' },
+        { id: 4, title: 'Article', link: '/blog' },
+        { id: 5, title: 'Admin', link: '/admin' },
+        { id: 5, title: 'Sign out', link: '/login' },
     ];
 
     return (
@@ -62,17 +64,7 @@ const Navbar = () => {
                     {/* Navbar Brand */}
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex-shrink-0 flex items-center">
-                            {/* Your logo or brand */}
-                            <img
-                                className="block lg:hidden h-8 w-auto"
-                                src="/logo.svg"
-                                alt="Logo"
-                            />
-                            <img
-                                className="hidden lg:block h-8 w-auto"
-                                src="/logo.svg"
-                                alt="Logo"
-                            />
+                            <h4 className='text-2xl font-bold'>Kemboi's Blog'</h4>
                         </div>
                         {/* Navbar links */}
                         <div className="hidden sm:block sm:ml-6">

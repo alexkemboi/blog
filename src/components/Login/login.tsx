@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-
+import { useRouter } from 'next/navigation';
 type UserData = {
     username: string;
     password: string;
@@ -11,19 +11,20 @@ const Login: React.FC = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    // Dummy array data for user login
     const dummyUsers: UserData[] = [
         { username: 'user1', password: 'password1' },
         { username: 'user2', password: 'password2' },
         { username: 'user3', password: 'password3' },
     ];
 
-    const handleLogin = () => {
+    const router = useRouter()
+    const handleLogin = (e: any) => {
+        e.preventDefault();
         const foundUser = dummyUsers.find(user => user.username === username && user.password === password);
         if (foundUser) {
             setError('');
-            // Perform login action (e.g., redirect or set authentication state)
             console.log('Login successful');
+            router.push('/blog');
 
         } else {
             setError('Invalid username or password');
@@ -38,6 +39,7 @@ const Login: React.FC = () => {
                 </div>
                 <form className="mt-8 space-y-6" onSubmit={e => e.preventDefault()}>
                     <div className="rounded-md shadow-sm -space-y-px">
+                        <div className="text-sm text-red-600">{error}</div>
                         <div className='mb-4'>
                             <label htmlFor="username" className="sr-only">Username</label>
                             <input
@@ -68,7 +70,7 @@ const Login: React.FC = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-between">
-                        <div className="text-sm text-red-600">{error}</div>
+
                         <div className="text-sm">
                             <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                                 Forgot your password?

@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
     const footerLinks: FooterLink[] = [
         { id: 1, title: 'About Us', url: '/about' },
         { id: 2, title: 'Contact Us', url: '/contact' },
-        { id: 3, title: 'Privacy Policy', url: '/privacy-policy' },
-        { id: 4, title: 'Terms of Service', url: '/terms-of-service' },
+        { id: 3, title: 'Articles', url: '/articles' },
+        { id: 4, title: 'Blogform', url: '/blogform' },
     ];
 
     return (
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                     ))}
                 </div>
                 <div className="mt-8 text-center text-gray-400">
-                    <p>&copy; {new Date().getFullYear()} Mental Health Blog. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Kemboi Mental Health Blog. All rights reserved.</p>
                 </div>
             </div>
         </footer>

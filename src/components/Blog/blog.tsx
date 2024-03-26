@@ -7,20 +7,25 @@ type Article = {
 };
 
 const Blog: React.FC = () => {
-    // Dummy data for blog articles
     const articles: Article[] = [
         {
             id: 1,
-            title: '5 Tips for Better Mental Health',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget felis risus. Integer...',
+            title: 'Understanding Anxiety Disorders',
+            content: 'Anxiety disorders are among the most common mental health disorders, affecting millions of people worldwide. They are characterized by excessive worry, fear, and apprehension that can interfere with daily life. Symptoms may include racing thoughts, restlessness, muscle tension, and difficulty concentrating. Treatment options include therapy, medication, and lifestyle changes.',
         },
         {
             id: 2,
-            title: 'How to Manage Stress in Daily Life',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget felis risus. Integer...',
+            title: 'The Importance of Self-Care for Mental Health',
+            content: 'Self-care is essential for maintaining good mental health. It involves taking deliberate actions to prioritize your well-being and reduce stress. Self-care activities can include exercise, meditation, spending time outdoors, practicing hobbies, and seeking support from friends and family. Incorporating self-care into your daily routine can improve mood, increase resilience, and enhance overall quality of life.',
         },
-        // Add more articles as needed
+        {
+            id: 3,
+            title: 'Coping Strategies for Depression',
+            content: 'Depression is a serious mental health condition characterized by persistent sadness, loss of interest or pleasure in activities, and feelings of worthlessness or hopelessness. Coping strategies for depression may include therapy, medication, lifestyle changes, and social support. It is essential to seek help from a healthcare professional if you or someone you know is experiencing symptoms of depression.',
+        },
+
     ];
+
 
     return (
         <div className="container mx-auto py-8 px-4">
