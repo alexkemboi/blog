@@ -35,9 +35,14 @@ const Contact: React.FC = () => {
             setIsLoading(false);
         }
     };
-
+    const sampleCode = `
+    const items = ['item1', 'item2', 'item3'];
+    for (let i = 0; i < items.length; i++) {
+      console.log(items[i]);
+    }
+  `;
     return (
-        <div className="container mx-auto px-4 py-8 w-4/5 bg-gray-300">
+        <div className="mx-auto px-4 py-8 w-full bg-[#F5F5F5]">
             <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Contact Us</h2>
             <form onSubmit={handleSubmit} className="max-w-lg mx-auto border border-solid rounded-sm p-4">
                 {isSuccess && (
@@ -89,6 +94,14 @@ const Contact: React.FC = () => {
                     >
                         {isLoading ? 'Submitting...' : 'Submit'}
                     </button>
+                </div>
+                <div className="bg-white shadow-md rounded-md p-6">
+                    <div className="bg-white shadow-md rounded-md p-6">
+                        <h2 className="text-xl font-bold mb-4">code testr</h2>
+                        <pre className="overflow-x-auto rounded-md bg-gray-100 p-4">
+                            <code className="language-ts" dangerouslySetInnerHTML={{ __html: sampleCode }} />
+                        </pre>
+                    </div>
                 </div>
             </form>
         </div>

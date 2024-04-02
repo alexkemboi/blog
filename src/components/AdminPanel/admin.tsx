@@ -50,7 +50,7 @@ const AdminInterface: React.FC = () => {
         setCurrentPage(pageNumber);
     };
     return (
-        <div className="container mx-auto py-8 px-4">
+        <div className="container mx-auto py-8 px-4 bg-[#F5F5F5]">
             <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">Admin Interface</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

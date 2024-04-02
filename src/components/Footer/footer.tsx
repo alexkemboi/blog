@@ -9,10 +9,11 @@ type FooterLink = {
 const Footer: React.FC = () => {
     // Dummy data for footer links
     const footerLinks: FooterLink[] = [
+        { id: 5, title: 'Home', url: '/home' },
         { id: 1, title: 'About Us', url: '/about' },
         { id: 2, title: 'Contact Us', url: '/contact' },
-        { id: 3, title: 'Articles', url: '/articles' },
-        { id: 4, title: 'Blogform', url: '/blogform' },
+        { id: 3, title: 'Articles', url: '/blog' },
+        { id: 4, title: 'Blogform', url: '/admin' },
     ];
 
     return (

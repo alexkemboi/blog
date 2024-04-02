@@ -30,10 +30,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     ];
 
     return (
-        <div className='h-screen bg-gray-300'>
+        <div className='h-screen bg-[#F5F5F5]'>
             <Navbar />
             <div className='w-full xs:flex-col md:w-full md:flex-col md:justify-between'>
-                <div className='overflow-y-auto h-full md:align-center md:justify-center w-4/5 m-auto'>
+                <div className='overflow-y-auto h-auto md:align-center md:justify-center w-9/10 m-auto'>
                     {children}
                 </div>
             </div>
